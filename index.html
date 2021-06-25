@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TacoZen Website</title>
+        <link rel="icon" href="taco.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/e7a80fe170.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#" class="logo"><img src="taco.png"></a>
+                <div class="toggle" onclick = "toggleMenu();"></div>
+                <ul class="navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>It's not just Food <br> It's <span> TacoZen <span> </span></h2>
+                    <p> We’re not just passionate purveyors of experiences, but everything else that goes with a full and rewarding restaurant experience. 
+                        We also offer a selection of premium teas, fine pastries and other delectable treats to please the taste buds. 
+                        </p>
+                        <br>
+                    <p> Get to know us and you’ll see: we are so much more than what we cook. </p>
+                        <br>
+                    <p> We make sure everything we do is through the lens of humanity – from our commitment to the highest quality food in the world, to the way we engage with our customers and communities to do business responsibly.</p>
+                    <a href="#">Learn More</a>                
+                </div>
+                <div class="imgBox">
+                    <img src="img1.png" class="tacoZen">
+                </div>
+
+            </div>
+
+            <ul class="thumb">
+                <li> <img src="thumb1.png" onclick= "imgSlider('img1.png');changeCircleColor('#46CB56')" alt=""></li>
+                <li><img src="thumb2.png" onclick= "imgSlider('img2.png');changeCircleColor('#eb7495')" alt=""></li>
+                <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')" alt=""></li>
+            </ul>
+            <ul class="sci">
+                <li><a href="#"><img src="24716-2-facebook-logo-image_32x32.ico" alt=""></a></li>
+                <li><a href="#"> <img src="34978-7-twitter-transparent-background_32x32.ico" alt=""></a></li>
+                <li><a href="#"><img src="58409-amstel-computer-instagram-gold-icons-race-logo_32x32.ico" alt=""></a></li>
+            </ul>
+        </section>
+<div class="footer">Made with <img src="heart.png" class="heart"> by <a href="https://twitter.com/yuricodesbot"> Yuri </a></div>
+<div class="footer">Icons made by <a href="https://www.freepik.com" style="text-decoration: none;" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" style="text-decoration: none" "Flaticon">Flaticon</a></div>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.tacoZen').src = anything;
+        } 
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+       
+    </script>
+    
+    </body>
+</html>
